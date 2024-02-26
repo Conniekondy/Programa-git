@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"/>
+</head>
+<body>
+    <div class="container"> 
+        <nav>
+            <img src="/Imagenes/Logo 24.png" class="imagen">
+            <button> 
+                Misión
+            </button>
+            <button>
+                Servicios
+            </button>
+            <button>
+                Contacto
+            </button>
+            <button class="buttonC">
+                Continuar
+            </button>
+        </nav>
+            <h2>Aqui podrá realizar la Creación de Usuarios - Cliente</h2>
+        <section>
+            <form action="/submit_form" method="post">
+            <label for="email">No. de NIT:</label><br>
+            <input type="text" id="email" name="email" size="60"><br>
+            <label for="subject">Nombre de la Empresa:</label><br>
+            <input type="text" id="subject" name="subject" size="60"><br>
+            <label for="subject">Producto:</label><br>
+            <input type="text" id="email" name="email" size="60"><br>
+            <label for="subject">No. de Celular:</label><br>
+            <input type="text" id="subject" name="subject" size="60"><br>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="text" id="subject" name="subject" size="60"><br>
+        </form>
+        </section>
+        <button class="buttoncu">
+            Crear Usuario
+        </button>
+       </div>
+       <script>
+            window.onload = function() {
+            var inputs = ['subject','email'];
+            inputs.forEach(function(id) {
+            var input = document.getElementById(id);
+            input.oninput = function() {
+            this.size = this.value.length;
+            }
+        });
+    }
+        </script>
+    </body>
+</html>

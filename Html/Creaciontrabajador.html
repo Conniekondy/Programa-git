@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"/>
+</head>
+<body>
+    <div class="container"> 
+    <nav>
+            <img src="/Imagenes/Logo 24.png" class="imagen">
+            <button> 
+                Misión
+            </button>
+            <button>
+                Servicios
+            </button>
+            <button>
+                Contacto
+            </button>
+            <button class="buttonC">
+                Continuar
+            </button>
+    </nav>
+        <section>
+            <h2>Aquí podrá realizar la Creación de Usuarios
+            Trabajador</h2>
+        <form action="/submit_form" method="post">
+            <label for="fname">Nombres:</label>
+            <input type="text" id="fname" name="fname" size="50">
+            <label for="lname">Apellidos:</label>
+            <input type="text" id="lname" name="lname" size="50"><br>
+            <label for="fname">No. de Cédula:</label>
+            <input type="text" id="fname" name="fname" size="50">
+            <label for="lname">Fecha de Nacimiento:</label>
+            <input type="text" id="lname" name="lname" size="50"><br>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="text" id="email" name="email" size="60"><br>
+            <label for="subject">Número de Celular:</label><br>
+            <input type="text" id="subject" name="subject" size="60"><br>
+            <label for="fname">Usuario:</label>
+            <input type="text" id="fname" name="fname" size="50">
+            <label for="lname">Contraseña:</label>
+            <input type="text" id="lname" name="lname" size="50"><br>
+            <label for="fname">Confirmar Contraseña:</label>
+            <input type="text" id="fname" name="fname" size="50">
+        </form>
+        </section>
+        <button class="buttoncu">
+            Crear Usuario
+        </button>
+    </div>
+    <script>
+        window.onload = function() {
+        var inputs = ['fname','lname','subject', 'email'];
+        inputs.forEach(function(id) {
+        var input = document.getElementById(id);
+        input.oninput = function() {
+        this.size = this.value.length;
+        }
+    });
+}
+    </script>
+    </body>
+</html>
